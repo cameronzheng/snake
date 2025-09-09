@@ -4,8 +4,8 @@ import pygame
 
 # pygame setup
 pygame.init()
-screen_width = 720
-screen_height = 720
+screen_width = 800
+screen_height = 800
 screen = pygame.display.set_mode((screen_width, screen_height))
 clock = pygame.time.Clock()
 running = True
@@ -39,7 +39,9 @@ while running:
     pygame.draw.line(screen, "white", top_right_point, bot_right_point, width = 2)  # right border
     
     # drawing the background for game
-    pygame.draw.rect(screen, "light green", (top_left_point[0], top_left_point[1], 500, 50))
+    for i in range(10):
+      pygame.draw.rect(screen, "light green", (top_left_point[0], top_left_point[1] + 50 * i, screen_width - 30, 20))
+      pygame.draw.rect(screen, "green", (top_left_point[0], top_left_point[1] + 20 + 50 * i, screen_width - 30, 20))
 
 
     # flip() the display to put your work on screen
