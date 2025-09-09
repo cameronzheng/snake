@@ -24,7 +24,7 @@ while running:
       running = False
     
     # fill the screen with a color to wipe away anything from last frame
-    screen.fill("green")
+    screen.fill("black")
 
     # RENDER GAME HERE
     # border of the game
@@ -33,12 +33,13 @@ while running:
     bot_left_point = [15, screen_height - 15]
     bot_right_point = [screen_width - 15, screen_height - 15]
 
-    pygame.draw.line(screen, "black", top_left_point, top_right_point, width = 2)  # top border
-    pygame.draw.line(screen, "black", bot_left_point, bot_right_point, width = 2)  # bottom border
-    pygame.draw.line(screen, "black", top_left_point, bot_left_point, width = 2)  # left border
-    pygame.draw.line(screen, "black", top_right_point, bot_right_point, width = 2)  # right border
+    pygame.draw.line(screen, "white", top_left_point, top_right_point, width = 2)  # top border
+    pygame.draw.line(screen, "white", bot_left_point, bot_right_point, width = 2)  # bottom border
+    pygame.draw.line(screen, "white", top_left_point, bot_left_point, width = 2)  # left border
+    pygame.draw.line(screen, "white", top_right_point, bot_right_point, width = 2)  # right border
     
-    pygame.draw.rect(screen, "blue", (500, 50, 50, 50))
+    # drawing the background for game
+    pygame.draw.rect(screen, "light green", (top_left_point[0], top_left_point[1], 500, 50))
 
 
     # flip() the display to put your work on screen
